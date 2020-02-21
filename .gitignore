@@ -1,3 +1,6 @@
+*.css
+.DS_Store
+
 # Logs
 logs
 *.log
