@@ -208,7 +208,9 @@ class App extends Base {
   render(){
     return `
       <div>
-        <button click="sayHi">Click me and I will say Hi!</button>
+        <button click="sayHi">
+          Click me and I will say Hi!
+        </button>
       </div>
     `
   }
