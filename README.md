@@ -4,7 +4,7 @@ This is a small view/component based web framework that helps you build web appl
 
 You can look at it as *light weight* alternative to frameworks such as *Angular*, *React* and *Vue*.
 
-It is a good starting point for the unexperienced JavaScript programmer that wants to learn programming patterns that applies to these more fullblown frameworks as well, but is a lot less complex.
+It is a good starting point for the unexperienced JavaScript programmer that wants to learn programming patterns that applies to these more fullblown frameworks as well, while avoiding the complexity and larger scope of these frameworks.
 
 It promotes an object oriented approach and the use of class based components.
 
@@ -13,8 +13,8 @@ Written by **Thomas Frank**, © Node Hill 2020. MIT-licensed.
 ## A quick **overview**
 * The framework automatically loads all your JavaScript files.
 * The framework automatically compiles SASS to CSS.
-* **Bootstrap** is included with its full SASS source code, so that you can easily make variable overrides to Bootstrap.
-* You get an [**icon font included**](https://icofont.com/icons) - so that you can easily use icons in your application.
+* **Bootstrap** is included with its full SASS source code, so that you can easily make variable overrides to create your own theme.
+* You get an [**icon font included**](https://icofont.com/icons) - a hassle free way of starting to use icons in your application.
 * *Hot reload* - The framework automatically reloads your web page when you make code changes.
 * *Error handling* - The framework shows most SASS and JavaScript errors "on screen" in your browser.
 * The **Base** class that is built in to the framework helps you with basic tasks such as:
@@ -38,7 +38,7 @@ See how this is done in the examples in this documentation. (But do note that yo
 ## Folder structure
 The folder structure is as follows:
 
-* **_server** - the source code of the frameworks. You should not need to change any file in this folder.
+* **_server** - the source code of the framework. You should not need to change any file in this folder.
 * **documentation** - a project built using the framework. It shows the documentation you are reading right now.
 * **example-empty** - a project built using the framework. An almost blank/empty App. You can copy this folder and place the copy as a sibling folder to create a new project.
 * **example-minimal** - a project built using the framework. An very simple App. You can copy this folder and place the copy as a sibling folder to create a new project.
@@ -56,7 +56,7 @@ Inside a project folder you have the following structure:
 * **fonts** - the icon font that is included. You should not need to change any file in this folder.
 * **images** - here you can place your images. And replace the *favicon.png* if you want to.
 * **js** - here you place all your JavaScript. Use one file per class/component. (Start with creating the *App.js* file.)
-* **sass** - all the sass. Edit and add files as you want, but avoid changing anything inside the **bootstrap** and **ico-font** sub folders though.
+* **sass** - all the sass. Edit and add files as you want, but avoid changing anything inside the **bootstrap** and **ico-font** sub folders.
 
 ## Start a server
 You can run several web servers on different ports at once, showing different projects.
@@ -67,7 +67,7 @@ The very first time (after downloading) run:
 npm install
 ```
 
-The start a web server write:
+To start a web server write:
 
 ```text
 npm start name-of-project-folder port-number
@@ -93,7 +93,7 @@ To be able to start several servers at once just run them from different termina
 A component is a class that extends the **Base** class.
 
 ### Use the **render** method
-A component **must** have a method called **render**. This method **must** return a string of HTML. The string should hav exactly *one* **root element** - an HTML element that encapsulates all the HTML it returns.
+A component **must** have a method called **render**. This method **must** return a string of HTML. The string **must** have exactly *one* **root element** - an HTML element that encapsulates all the HTML it returns.
 
 We sometimes call the output from the render method a *view*.
 
@@ -119,9 +119,9 @@ A component **can** have a method called **mount**.
 
 In the **mount** method you do things you would otherwise do in the **constructor** method (that you should avoid using) - like setting property values for the instance of the class/component.
 
-The **mount** method *can* be **async**. This makes it an ideal place for fetching data from the database - since this needs to be done using **async**.
+The **mount** method *can* be **async**. This makes it an ideal place for fetching data from the database - since this needs to be done using **await**.
 
-The mount method will be called automatically by the framework the first time a component is to be shown.
+The mount method will be called automatically by the framework the first time a component is shown.
 
 ##### App.js
 ```js
@@ -142,7 +142,7 @@ class App extends Base {
 ### *Do not* use the **constructor** method
 You **should** not write your own constructor.
 
-**Base** will let you inherit a constructor that accepts properties to be set on your instances (see the below).
+**Base** will let you inherit a constructor that let you set properties when you create your instances (see the examples below).
 
 ### Sub-components
 Sub-components are created by other components. This means every component except **App** is a **sub-component**, created using *composition*.
