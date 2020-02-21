@@ -31,9 +31,9 @@ We recommend that you use *Visual Studio Code* as your editor and that you
 
 * **install** the *Visual Studio Code extension* [**es6-string-html**](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html).
 
-This will let you highlight html and sql code written in your javascript correctly by using the comments **/&ast;html&ast;/** and **/&ast;sql&ast;/** at appropriate places. 
+This will let you highlight html and sql code written in your JavaScript code correctly by using the comments **/&ast;html&ast;/** and **/&ast;sql&ast;/** at appropriate places. 
 
-See how this is done in the examples in this documentation.
+See how this is done in the examples in this documentation. (But do note that you can't see the actual highlighting in the documentation.)
 
 ## Folder structure
 The folder structure is as follows:
@@ -329,6 +329,7 @@ Then you can add properties to the store:
 
 /* Usually we will want to add properties
    only if they don't exist already */
+
 store.computerPlayers = store.computerPlayers 
   || ['Alf', 'Beatrice', 'Cecil'];
 store.gameSettings = store.gameSettings 
