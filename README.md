@@ -44,6 +44,8 @@ The folder structure is as follows:
 * **example-minimal** - a project built using the framework. An very simple App. You can copy this folder and place the copy as a sibling folder to create a new project.
 * **example-shop** - a project built using the framework. A fully working web shop. Study it to understand more about the framework.
 * **node_modules** - the installed modules needed by the framework. You should not need to change any file in this folder.
+* *.gitignore* - a list of files that should be ignored by git. You should not need to change this file.
+* *LICENSE* - an open source MIT license. You should not need to change this file.
 * *package-lock.json*. You should not need to change this file.
 * *package.json*. You should not need to change this file.
 * *README.md* - this documentation.
@@ -58,6 +60,12 @@ Inside a project folder you have the following structure:
 
 ## Start a server
 You can run several web servers on different ports at once, showing different projects.
+
+The very first time (after downloading) run:
+
+```text
+npm install
+```
 
 The start a web server write:
 
