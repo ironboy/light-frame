@@ -11,13 +11,13 @@ It promotes an object oriented approach and the use of class based components.
 Written by **Thomas Frank**, © Node Hill 2020. MIT-licensed.
 
 ## A quick **overview**
-* The system automatically loads all your JavaScript files.
-* The system automatically compiles SASS to CSS.
+* The framework automatically loads all your JavaScript files.
+* The framework automatically compiles SASS to CSS.
 * **Bootstrap** is included with its full SASS source code, so that you can easily make variable overrides to Bootstrap.
 * You get an [**icon font included**](https://icofont.com/icons) - so that you can easily use icons in your application.
-* *Hot reload* - The system automatically reloads your web page when you make code changes.
-* *Error handling* - The system shows most SASS and JavaScript errors "on screen" in your browser.
-* The **Base** class that is built in to the system helps you with basic tasks such as:
+* *Hot reload* - The framework automatically reloads your web page when you make code changes.
+* *Error handling* - The framework shows most SASS and JavaScript errors "on screen" in your browser.
+* The **Base** class that is built in to the framework helps you with basic tasks such as:
     * *rendering* html to the DOM
     * *routing* (changing which content is shown based on the route/url)
     * *event handling* (listening and reacting to when the user clicks, types etc)
@@ -250,7 +250,7 @@ class App extends Base {
 ```
 
 ## Routing
-The system never does a hard reload of the web page. Instead it shows (and removes) content based on the users current url - "route" - and the **route**-attribute that you can set on any html element.
+The framework never does a hard reload of the web page. Instead it shows (and removes) content based on the users current url - "route" - and the **route**-attribute that you can set on any html element.
 
 ### route
 To *show* content only when you are on a certain route add the attribute **route** to an element (usually the root element of a component).
@@ -279,7 +279,7 @@ If you want to *hide* content on a certain route, add the **not-route** to an el
 The example above would hide the shopping-cart when you are on the checkout route.
 
 ### route="404"
-Adding the attribute **route="404"** will show the content of the element when the system *can find **no** matching route*.
+Adding the attribute **route="404"** will show the content of the element when the framework *can find **no** matching route*.
 
 ```html
 <div route="404">
